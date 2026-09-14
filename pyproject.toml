@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mstar-hrrp"
+version = "0.1.0"
+description = "Reproducible MSTAR SAR chip to high-resolution range profile (HRRP) extraction"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+keywords = ["MSTAR", "HRRP", "SAR", "radar", "range profile", "open research"]
+dependencies = ["numpy>=1.23"]
+
+[project.scripts]
+mstar-hrrp = "mstar_hrrp.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
